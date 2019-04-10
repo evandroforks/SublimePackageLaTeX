@@ -5,6 +5,11 @@ name: LaTeX
 file_extensions:
   - tex
   - ltx
+  - bbx
+  - cbx
+  - ibx
+  - fd
+  - def
 scope: text.tex.latex
 contexts:
   prototype:
