@@ -8,6 +8,8 @@ file_extensions:
   - bbx
   - cbx
   - ibx
+  - dtx
+  - ins
   - fd
   - def
 scope: text.tex.latex
