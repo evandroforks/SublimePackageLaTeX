@@ -2,6 +2,8 @@
 ---
 # http://www.sublimetext.com/docs/3/syntax.html
 name: LaTeX
+scope: text.tex.latex
+
 file_extensions:
   - tex
   - ltx
@@ -12,7 +14,12 @@ file_extensions:
   - ins
   - fd
   - def
-scope: text.tex.latex
+
+first_line_match: |-
+  (?xi:
+    ^ \s* \%+ .*? -\*- .*? \blatex\b .*? -\*-  # editorconfig
+  )
+
 contexts:
   prototype:
     - include: comments
@@ -1619,6 +1626,8 @@ contexts:
         - match: '\}'
           scope: punctuation.definition.group.brace.end.latex
           pop: true
+        - include: general-constants
+        - include: general-commands
         - include: array-preamble
 
     - match: 'l|r|c'
